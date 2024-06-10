@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p id="greetingMessage"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.min.js" integrity="sha384-TfjOlWccrKKSEc/hJqxs6Tofoh4+tlm//VJYb92Ow7aPNtgfaKuuLsnFqObi3xmp" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let greetingMessage = document.getElementById('greetingMessage');
+            let loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                greetingMessage.textContent = `Hello ${loggedInUser}!`;
+            } else {
+                greetingMessage.textContent = 'Welcome!';
+            }
+        });
+    </script>
+</body>
+</html>

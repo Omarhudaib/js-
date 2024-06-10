@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 1200px) {
+            .ll {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+        #cd {
+            display: block;
+            height: 100vh;
+        }
+
+        form {
+            width: 50%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-md-flex flex-md-equal h-100">
+        <div class="col-lg-4 p-0 auth-slider my-div">
+           
+        </div>
+        <div class="col-lg-8 px-0">
+            <header role="banner">
+                <nav role="navigation" id="mainNav" class="navbar navbar-light bg-white navbar-expand-md pt-2 border-bottom pb-0 mb-2 pt-1" aria-label="Main navigation">
+                    <div class="container-fluid">
+                        <a href="/">
+                            <img id="imgw" src="https://datascience.orangecodingacademy.com/assets/boosted/dist/img/white.png" class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" height="70" loading="lazy">
+                        </a>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse justify-content-end collapse" id="orange-navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="https://datascience.orangecodingacademy.com/help" target="_blank">Help</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/terms" target="_blank">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <form style="margin-left: 25%;" class="needs-validation">
+                <h1>Create an account</h1>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label is-required">Email address <span class="visually-hidden">(required)</span></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <div id="emailHelp" class="form-text">eg: username@domain.com</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputMobile1" class="form-label is-required">Mobile <span class="visually-hidden">(required)</span></label>
+                    <input type="text" class="form-control" id="exampleInputMobile1" aria-describedby="mobileHelp" required>
+                    <div id="mobileHelp" class="form-text">eg: 077********</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label is-required">Create Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passHelp" required>
+                    <div id="passHelp" class="form-text">The Password should be between 6-18 characters.</div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input " id="exampleCheck1" >
+                    <label  class="form-check-label" for="exampleCheck1">I agree to the terms & conditions Orange. </label>
+                    <div id="pl1">*</div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                    <label  class="form-check-label" for="exampleCheck2">Receive Coding Academy Newsletter.</label>
+                    <div id="pl2">*</div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg btn-block" id="signupBtn" type="button">Sign up</button>
+                    <button class="btn btn-secondary btn-lg btn-block" onclick="goToPage('login.html')" type="button">Already have an account? Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.min.js" integrity="sha384-TfjOlWccrKKSEc/hJqxs6Tofoh4+tlm//VJYb92Ow7aPNtgfaKuuLsnFqObi3xmp" crossorigin="anonymous"></script>
+    <script>
+        function goToPage(page) {
+            window.location.href = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let password1 = document.getElementById('exampleInputPassword1');
+            let email1 = document.getElementById('exampleInputEmail1');
+            let mobile1 = document.getElementById('exampleInputMobile1');
+            let example1 = document.getElementById('exampleCheck1');
+            let example2 = document.getElementById('exampleCheck2');
+
+            let tet1 = document.getElementById('pl1');
+            let tet2 = document.getElementById('pl2');
+            let emailHelp = document.getElementById('emailHelp');
+            let mobileHelp = document.getElementById('mobileHelp');
+            let passHelp = document.getElementById('passHelp');
+
+            let signupBtn = document.getElementById('signupBtn');
+
+            signupBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const emailRegex = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+                const mobileRegex = /^077\d{7}$/;
+
+                const isEmailValid = emailRegex.test(email1.value);
+                const isPasswordValid = passwordRegex.test(password1.value);
+                const isMobileValid = mobileRegex.test(mobile1.value);
+
+                emailHelp.textContent = 'eg: username@domain.com';
+                emailHelp.style.color = '';
+                mobileHelp.textContent = 'eg: 077********';
+                mobileHelp.style.color = '';
+                passHelp.textContent = 'The Password should be between 6-18 characters.';
+                passHelp.style.color = '';
+
+                let formData = {};
+
+                if (isEmailValid) {
+                    emailHelp.textContent = 'Accepted email';
+                    emailHelp.style.color = 'rgb(20, 248, 35)';
+                    formData.email = email1.value;
+                } else {
+                    emailHelp.textContent = 'Email is not accepted';
+                    emailHelp.style.color = 'red';
+                }
+
+                if (isPasswordValid) {
+                    passHelp.textContent = 'Good password';
+                    passHelp.style.color = 'rgb(20, 248, 35)';
+                    formData.password = password1.value;
+                } else {
+                    passHelp.textContent = 'Password should be minimum 8 characters with at least one lowercase letter, one uppercase letter, and one number';
+                    passHelp.style.color = 'red';
+                }
+
+                if (isMobileValid) {
+                    mobileHelp.textContent = 'Accepted mobile number';
+                    mobileHelp.style.color = 'rgb(20, 248, 35)';
+                    formData.mobile = mobile1.value;
+                } else {
+                    mobileHelp.textContent = 'Mobile number is not accepted';
+                    mobileHelp.style.color = 'red';
+                }
+
+                if (example1.checked) {
+                    tet1.innerHTML = 'Accepted';
+                    tet1.style.color = 'rgb(20, 248, 35)';
+                } else {
+                    tet1.innerHTML = 'You must agree to the terms & conditions';
+                    tet1.style.color = 'red';
+                }
+                if (example2.checked) {
+                    tet2.innerHTML = 'Accepted';
+                    tet2.style.color = 'rgb(20, 248, 35)';
+                } else {
+                    tet2.innerHTML = 'You will not receive the newsletter';
+                    tet2.style.color = 'red';
+                }
+
+                if (example1.checked && isEmailValid && isPasswordValid && isMobileValid) {
+                    localStorage.setItem(email1.value, JSON.stringify(formData));
+                    window.location.href = 'orange2.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
