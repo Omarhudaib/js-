@@ -11,18 +11,31 @@
     <div class="container">
         <h1>Welcome</h1>
         <p id="greetingMessage"></p>
+        <div id =55>__</div>
+        <div><button id="out">log out</button></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.min.js" integrity="sha384-TfjOlWccrKKSEc/hJqxs6Tofoh4+tlm//VJYb92Ow7aPNtgfaKuuLsnFqObi3xmp" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            let out = document.getElementById('out');
             let greetingMessage = document.getElementById('greetingMessage');
-            let loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser) {
-                greetingMessage.textContent = `Hello ${loggedInUser}!`;
+            let name = sessionStorage.getItem('loggedInUser')
+          
+            let ii = document.getElementById('55');
+            
+            if (name) {
+                greetingMessage.textContent = `Hello ${name}!`;
             } else {
-                greetingMessage.textContent = 'Welcome!';
+                greetingMessage.textContent = 'Welcome';
             }
+
+            out.addEventListener('click', function(event) {
+                event.preventDefault();
+              sessionStorage.clear();
+            ii.textContent = "YOU MUST LOG IN";
+            location.reload()
+            });
         });
     </script>
 </body>
